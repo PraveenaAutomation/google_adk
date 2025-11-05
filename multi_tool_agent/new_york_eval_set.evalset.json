@@ -1,0 +1,135 @@
+{
+  "eval_set_id": "new_york_eval_set",
+  "name": "new_york_eval_set",
+  "eval_cases": [
+    {
+      "eval_id": "new_york_eval_case",
+      "conversation": [
+        {
+          "invocation_id": "e-b0241094-31b6-49c6-8c47-cb94dc800e03",
+          "user_content": {
+            "parts": [
+              {
+                "text": "what is the weather in New York?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "OK. The weather in New York is sunny with a temperature of 25 degrees Celsius (77 degrees Fahrenheit).\n"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-9dae3956-71c3-4a59-a8ab-322c06006f46",
+                        "args": {
+                          "city": "New York"
+                        },
+                        "name": "get_weather"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-9dae3956-71c3-4a59-a8ab-322c06006f46",
+                        "name": "get_weather",
+                        "response": {
+                          "status": "success",
+                          "report": "The weather in New York is sunny with a temperature of 25 degrees Celsius (77 degrees Fahrenheit)."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1762307535.834656
+        },
+        {
+          "invocation_id": "e-8b85006a-9b05-4699-b2f4-8d2dbbfe7ac2",
+          "user_content": {
+            "parts": [
+              {
+                "text": "what is the time in New York?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "OK. The current time in New York is 2025-11-04 20:52:25 EST-0500.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-223d830a-532d-4d3e-b03b-c2294c4be37b",
+                        "args": {
+                          "city": "New York"
+                        },
+                        "name": "get_current_time"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-223d830a-532d-4d3e-b03b-c2294c4be37b",
+                        "name": "get_current_time",
+                        "response": {
+                          "status": "success",
+                          "report": "The current time in New York is 2025-11-04 20:52:25 EST-0500"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1762307544.309837
+        }
+      ],
+      "session_input": {
+        "app_name": "multi_tool_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1762307580.589616
+    }
+  ],
+  "creation_timestamp": 1762307561.276427
+}

@@ -1,0 +1,135 @@
+{
+  "eval_set_id": "india_eval_set",
+  "name": "india_eval_set",
+  "eval_cases": [
+    {
+      "eval_id": "india_eval_case",
+      "conversation": [
+        {
+          "invocation_id": "e-60da77a9-0fb5-4b29-bcab-9b332cc96ac0",
+          "user_content": {
+            "parts": [
+              {
+                "text": "what is the weather in kochi, kerala"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "I am sorry, I cannot fulfill this request. The weather information for 'kochi, kerala' is not available.\n"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-8f3fa469-8d25-4150-9838-a459e87a04d6",
+                        "args": {
+                          "city": "kochi, kerala"
+                        },
+                        "name": "get_weather"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-8f3fa469-8d25-4150-9838-a459e87a04d6",
+                        "name": "get_weather",
+                        "response": {
+                          "status": "error",
+                          "error_message": "Weather information for 'kochi, kerala' is not available."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1762308254.164001
+        },
+        {
+          "invocation_id": "e-f240388d-ae87-4a42-a772-b97c3e8fe96b",
+          "user_content": {
+            "parts": [
+              {
+                "text": "what is the time in kochi, kerala"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Sorry, I don't have timezone information for kochi, kerala."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-c9294d38-d48e-4dad-96e1-8343587fefe7",
+                        "args": {
+                          "city": "kochi, kerala"
+                        },
+                        "name": "get_current_time"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-c9294d38-d48e-4dad-96e1-8343587fefe7",
+                        "name": "get_current_time",
+                        "response": {
+                          "status": "error",
+                          "error_message": "Sorry, I don't have timezone information for kochi, kerala."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1762308265.86616
+        }
+      ],
+      "session_input": {
+        "app_name": "multi_tool_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1762308282.861692
+    }
+  ],
+  "creation_timestamp": 1762308234.196295
+}

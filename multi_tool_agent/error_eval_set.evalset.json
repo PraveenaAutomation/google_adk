@@ -1,0 +1,135 @@
+{
+  "eval_set_id": "error_eval_set",
+  "name": "error_eval_set",
+  "eval_cases": [
+    {
+      "eval_id": "error_eval_case",
+      "conversation": [
+        {
+          "invocation_id": "e-ea25bbf5-bd73-49bf-b415-4e43e79374bf",
+          "user_content": {
+            "parts": [
+              {
+                "text": "what is the weather in New york?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "I am sorry, I cannot fulfill this request. The weather information for 'New York' is not available."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-11b297e6-a167-405c-9a0c-3cebabce5f4e",
+                        "args": {
+                          "city": "New york"
+                        },
+                        "name": "get_weather"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-11b297e6-a167-405c-9a0c-3cebabce5f4e",
+                        "name": "get_weather",
+                        "response": {
+                          "status": "success",
+                          "report": "I am sorry, I cannot fulfill this request. The weather information for 'New York' is not available."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1762307755.342564
+        },
+        {
+          "invocation_id": "e-4c0a6ff2-7105-464c-a80f-0401ea3127ac",
+          "user_content": {
+            "parts": [
+              {
+                "text": "what is the current time in New York?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Sorry, I don't have timezone information for New York"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-1ce5b505-fe3c-4790-b3ea-ac755c90fb04",
+                        "args": {
+                          "city": "New york"
+                        },
+                        "name": "get_current_time"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "weather_time_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-1ce5b505-fe3c-4790-b3ea-ac755c90fb04",
+                        "name": "get_current_time",
+                        "response": {
+                          "status": "success",
+                          "report": "Sorry, I don't have timezone information for New York"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1762307766.966872
+        }
+      ],
+      "session_input": {
+        "app_name": "multi_tool_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1762307779.1562681
+    }
+  ],
+  "creation_timestamp": 1762307726.3879209
+}
